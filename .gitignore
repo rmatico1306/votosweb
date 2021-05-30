@@ -130,5 +130,5 @@ dmypy.json
 # Text backup files
 *.bak
 #Database
-*.mysql
+*.sqlite3
 local_settings.py

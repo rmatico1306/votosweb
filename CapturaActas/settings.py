@@ -134,6 +134,8 @@ EMAIL_USE_TLS= True
 EMAIL_PORT= 587
 EMAIL_HOST_USER="pcivilcunduacan@gmail.com"
 EMAIL_HOST_PASSWORD= "prueba110520"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 STATICFILES_DIRS= (
     os.path.join(BASE_DIR,"static"),
 )
@@ -149,3 +151,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
