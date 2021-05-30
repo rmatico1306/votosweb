@@ -131,3 +131,4 @@ dmypy.json
 *.bak
 #Database
 *.mysql
+local_settings.py
