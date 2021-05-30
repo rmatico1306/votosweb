@@ -1,0 +1,68 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resultados votaciones 2021</title>
+        <link rel="stylesheet" href="{% static 'css/tabla.css' %}" >
+    </head>
+    <body>
+        
+        <header>
+            <h1 class="titulo1">VOTACIONES "CUNDUACAN 2021"</h1>
+            
+        </header>
+        <nav>
+            <ul>
+                <!--
+                <li>principal</li>
+                <li>contacto</li>
+                -->
+                
+            </ul>
+        </nav>
+        <div id="main-container">
+            <table>
+                <script> var timer = null;
+                    function auto_reload()
+                    {
+                     top.location.href = 'http://127.0.0.1:8000/resultados_votos/';
+                    } </script>  <body onload="timer = setTimeout('auto_reload()',5000);">
+
+                <caption>RESULTADOS TOTAL DE LAS ELECCIONES 2021</caption>
+                <tr>
+                    <th>LOGO</th>
+                    <th>PARTIDO POLITICO</th>
+                    <th>TOTAL DE VOTOS</th>
+
+                </tr>
+                <tr>
+                    <td><img src="{% static 'image/independiente.jpg' %}", width="100" height="100"></td>
+                    <td>Chelo Cano, independiente</td>
+                    <td>{{resultado_cano}}</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'image/morena.png' %}", width="100" height="100"></td>
+                    <td>Oscar enrique ramos, Morena</td>
+                    <td>{{resultado_oscar}}</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'image/PRD.png' %}", width="100" height="100"></td>
+                    <td>Homero yanes,PRD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'image/PRI.png' %}", width="100" height="100"></td>
+                    <td>Aurora Piñeda,PRI</td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+    </body>
+    <footer>
+
+
+    </footer>
+</html>
